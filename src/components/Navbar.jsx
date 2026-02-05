@@ -8,26 +8,20 @@ import {
   Bars3Icon,
   ArrowTopRightOnSquareIcon,
   EnvelopeIcon,
-  BuildingStorefrontIcon,
   QuestionMarkCircleIcon,
-  ClipboardDocumentCheckIcon,
   ComputerDesktopIcon,
   BuildingOfficeIcon,
-} from "@heroicons/react/24/outline"; {/* used Heroicons */}
-
+  HomeIcon,
+} from "@heroicons/react/24/outline"; // Heroicons
 
 const Navbar = () => {
   const [SearchFunction, SetSearch] = useState(false);
-
   const linksDetectionResult = [
-
-    { key: "contact", label: "تواصل معنا", icon: EnvelopeIcon },
-    { key: "directory", label: "دليل الأعمال", icon: BuildingStorefrontIcon },
-    { key: "faq", label: "الأسئلة الشائعة", icon: QuestionMarkCircleIcon },
-    { key: "guides", label: "الأدلة الإرشادية", icon: ClipboardDocumentCheckIcon },
-    { key: "services", label: "الخدمات الإلكترونية", icon: ComputerDesktopIcon },
+    { key: "home", label: "الرئيسية", icon: HomeIcon },
     { key: "about", label: "عن المركز", icon: BuildingOfficeIcon },
-
+    { key: "services", label: "الخدمات الإلكترونية", icon: ComputerDesktopIcon },
+    { key: "faq", label: "الأسئلة الشائعة", icon: QuestionMarkCircleIcon },
+    { key: "contact", label: "تواصل معنا", icon: EnvelopeIcon },
   ];
 
   return (
@@ -48,6 +42,7 @@ const Navbar = () => {
             </a>
 
 
+            {/* Links */}
             <div className="hidden lg:flex justify-center gap-7">
 
               {linksDetectionResult.map((item) => {
@@ -72,11 +67,11 @@ const Navbar = () => {
 
 
             {/* Buttons */}
-
             <div className="flex items-center justify-end gap-3">
 
+              {/* منصة الأعمال */}
               <a
-                href="https://www.saudibusiness.gov.sa/Identity/Account/Login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DInvestorPortal%26redirect_uri%3Dhttps%253A%252F%252Fe2.business.sa%252Fauth%252Fcallback%26response_type%3Dcode%26scope%3DSchoolLicenseAPI%2520RatingApi%2520userprofileapis%2520ReserveTradeNameAPI%2520QRApis%2520InvestorPortalApi%2520proxyapi%2520openid%2520profile%2520roles%2520offline_access%2520servicecatalogapis%2520delegationapi%2520requestapi%2520lookupapis%2520api%2520EAuthenticateAPI%2520AttachmentAPI%2520RecipientsCrNotificationsApi%2520notificationapi"
+                href="https://www.saudibusiness.gov.sa/Identity/Account/Login"
                 target="_blank"
                 rel="noreferrer"
                 className="hidden md:flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/30 rounded text-sm transition hover:bg-sky-500/20 hover:border-sky-400 hover:text-sky-300 active:scale-95"
@@ -94,11 +89,6 @@ const Navbar = () => {
               </button>
 
 
-              <button className="px-3 py-2 border border-white/30 rounded text-sm hover:bg-white/10">
-                En
-              </button>
-
-
               <button className="lg:hidden p-2">
                 <Bars3Icon className="w-6 h-6" />
               </button>
@@ -111,8 +101,6 @@ const Navbar = () => {
       </nav>
 
 
-      {/* Search */}
-      
       {SearchFunction && (
 
         <div
