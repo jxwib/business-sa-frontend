@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/frontendtask/static/css/main.63067b2c.css",
+    "main.js": "/frontendtask/static/js/main.586765c9.js",
+    "static/media/deepblue.jpg": "/frontendtask/static/media/deepblue.af8128526f371d920367.jpg",
+    "static/media/Homepage.mp4": "/frontendtask/static/media/Homepage.43975073d66cae515464.mp4",
+    "static/media/icon1.gif": "/frontendtask/static/media/icon1.56a6262c2894d7a4297f.gif",
+    "static/media/AboutUssbc.jpg": "/frontendtask/static/media/AboutUssbc.b744547edfeb3d1bc781.jpg",
+    "static/media/icon3.gif": "/frontendtask/static/media/icon3.e5a4d8aa4a1aa1325855.gif",
+    "static/media/icon2.gif": "/frontendtask/static/media/icon2.0ec371e68e5a87db1d75.gif",
+    "static/media/2030logo.png": "/frontendtask/static/media/2030logo.0c5405b7d7198fdb8429.png",
+    "static/media/SaudiBusinessCenter.png": "/frontendtask/static/media/SaudiBusinessCenter.668f970b7070d9346319.png",
+    "index.html": "/frontendtask/index.html",
+    "main.63067b2c.css.map": "/frontendtask/static/css/main.63067b2c.css.map",
+    "main.586765c9.js.map": "/frontendtask/static/js/main.586765c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63067b2c.css",
+    "static/js/main.586765c9.js"
+  ]
+}
