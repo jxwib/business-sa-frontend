@@ -16,6 +16,7 @@
 
 #   screenshots of the website !
 
-Home page
+## Home page
+
     <img width="1920" height="1398" alt="screencapture-localhost-3000-business-sa-frontend-2026-02-05-11_45_32" src="https://github.com/user-attachments/assets/f5ac3e13-3183-4a2c-a281-30364041b9cd" />
 
