@@ -1,11 +1,11 @@
-// Function Component for App
+import React from "react";
+import Aboutus from "./pages/Aboutus";
 
-import Homepage from "./pages/Homepage";
 function App() {
   return (
     <div className="App">
-      <Homepage />
 
+      <Aboutus />
     </div>
   );
 }
