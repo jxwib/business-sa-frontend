@@ -16,7 +16,5 @@
 
 #   screenshots of the website !
 
-## Home page
-
 ![Uploading screencapture-localhost-3000-business-sa-frontend-2026-02-05-11_45_32.png…]()
 
