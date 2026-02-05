@@ -16,5 +16,4 @@
 
 #   screenshots of the website !
 
-![Uploading screencapture-localhost-3000-business-sa-frontend-2026-02-05-11_45_32.png…]()
-
+https://github.com/jxwib/business-sa-frontend/blob/cf3de7851d111f11118e3567ea930939b47775a4/Homepage.png
