@@ -1,11 +1,11 @@
 import React from "react";
-import Contact from "./pages/Contact";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
 
-      <Contact />
+      <Navbar />
     </div>
   );
 }
