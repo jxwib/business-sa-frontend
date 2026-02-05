@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import sbcLogo from "../assets/SaudiBusinessCenter.png";
 import visionLogo from "../assets/2030logo.png";
@@ -12,16 +13,17 @@ import {
   ComputerDesktopIcon,
   BuildingOfficeIcon,
   HomeIcon,
-} from "@heroicons/react/24/outline"; // Heroicons
+} from "@heroicons/react/24/outline";
 
 const Navbar = () => {
   const [SearchFunction, SetSearch] = useState(false);
+
   const linksDetectionResult = [
-    { key: "home", label: "الرئيسية", icon: HomeIcon },
-    { key: "about", label: "عن المركز", icon: BuildingOfficeIcon },
-    { key: "services", label: "الخدمات الإلكترونية", icon: ComputerDesktopIcon },
-    { key: "faq", label: "الأسئلة الشائعة", icon: QuestionMarkCircleIcon },
-    { key: "contact", label: "تواصل معنا", icon: EnvelopeIcon },
+    { path: "/", label: "الرئيسية", icon: HomeIcon },
+    { path: "/about", label: "عن المركز", icon: BuildingOfficeIcon },
+    { path: "/services", label: "الخدمات الإلكترونية", icon: ComputerDesktopIcon },
+    { path: "/faq", label: "الأسئلة الشائعة", icon: QuestionMarkCircleIcon },
+    { path: "/contact", label: "تواصل معنا", icon: EnvelopeIcon },
   ];
 
   return (
@@ -32,14 +34,14 @@ const Navbar = () => {
           <div className="grid grid-cols-[auto_1fr_auto] h-24 items-center text-white">
 
             {/* Logos */}
-            <a
-              href="/"
+            <Link
+              to="/"
               className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition"
             >
               <img src={sbcLogo} className="h-16 object-contain" />
               <div className="h-10 w-px bg-white/30" />
               <img src={visionLogo} className="h-16 object-contain" />
-            </a>
+            </Link>
 
 
             {/* Links */}
@@ -49,9 +51,9 @@ const Navbar = () => {
                 const Icon = item.icon;
 
                 return (
-                  <a
-                    key={item.key}
-                    href={`#${item.key}`}
+                  <Link
+                    key={item.path}
+                    to={item.path}
                     className="flex flex-col items-center gap-1 px-3 py-2 rounded-md text-white/80 transition hover:text-sky-300 hover:bg-sky-500/15 active:scale-95"
                   >
                     <Icon className="w-6 h-6" />
@@ -59,7 +61,7 @@ const Navbar = () => {
                     <span className="text-xs whitespace-nowrap">
                       {item.label}
                     </span>
-                  </a>
+                  </Link>
                 );
               })}
 
@@ -81,6 +83,7 @@ const Navbar = () => {
               </a>
 
 
+              {/* Search */}
               <button
                 onClick={() => SetSearch(true)}
                 className="p-2 rounded-full hover:bg-white/10"
@@ -89,6 +92,7 @@ const Navbar = () => {
               </button>
 
 
+              {/* Mobile Menu */}
               <button className="lg:hidden p-2">
                 <Bars3Icon className="w-6 h-6" />
               </button>
@@ -101,6 +105,7 @@ const Navbar = () => {
       </nav>
 
 
+      {/* Search Modal */}
       {SearchFunction && (
 
         <div
