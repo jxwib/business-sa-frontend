@@ -2,19 +2,22 @@
   "name": "frontendtask",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jxwib.github.io/frontendtask",
+
+  "homepage": "https://jxwib.github.io/business-sa-frontend",
+
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.1.3",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "i18next": "^23.10.0",
     "react-i18next": "^14.1.0",
     "i18next-browser-languagedetector": "^7.2.0",
     "web-vitals": "^2.1.4"
   },
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -23,12 +26,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
+
   "browserslist": {
     "production": [
       ">0.2%",
@@ -41,6 +46,7 @@
       "last 1 safari version"
     ]
   },
+
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }

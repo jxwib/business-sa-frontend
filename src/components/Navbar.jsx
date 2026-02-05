@@ -13,10 +13,12 @@ import {
   ComputerDesktopIcon,
   BuildingOfficeIcon,
   HomeIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
   const [SearchFunction, SetSearch] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // ✅ للموبايل
 
   const linksDetectionResult = [
     { path: "/", label: "الرئيسية", icon: HomeIcon },
@@ -28,10 +30,12 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className="fixed top-0 inset-x-0 z-50
-bg-gradient-to-b from-[#020617] via-[#0f172a] to-[#020617]
-backdrop-blur-md border-b border-white/10">
-
+      {/* Navbar */}
+      <nav
+        className="fixed top-0 inset-x-0 z-50
+        bg-gradient-to-b from-[#020617] via-[#0f172a] to-[#020617]
+        backdrop-blur-md border-b border-white/10"
+      >
         <div className="max-w-[1400px] mx-auto px-6">
 
           <div className="grid grid-cols-[auto_1fr_auto] h-24 items-center text-white">
@@ -41,13 +45,13 @@ backdrop-blur-md border-b border-white/10">
               to="/"
               className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition"
             >
-              <img src={sbcLogo} className="h-16 object-contain" />
+              <img src={sbcLogo} alt="SBC Logo" className="h-16 object-contain" />
               <div className="h-10 w-px bg-white/30" />
-              <img src={visionLogo} className="h-16 object-contain" />
+              <img src={visionLogo} alt="Vision 2030" className="h-16 object-contain" />
             </Link>
 
 
-            {/* Links */}
+            {/* Desktop Links */}
             <div className="hidden lg:flex justify-center gap-7">
 
               {linksDetectionResult.map((item) => {
@@ -95,9 +99,16 @@ backdrop-blur-md border-b border-white/10">
               </button>
 
 
-              {/* Mobile Menu */}
-              <button className="lg:hidden p-2">
-                <Bars3Icon className="w-6 h-6" />
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="lg:hidden p-2"
+              >
+                {isOpen ? (
+                  <XMarkIcon className="w-7 h-7" />
+                ) : (
+                  <Bars3Icon className="w-7 h-7" />
+                )}
               </button>
 
             </div>
@@ -106,6 +117,33 @@ backdrop-blur-md border-b border-white/10">
 
         </div>
       </nav>
+
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden fixed top-24 inset-x-0 z-40 bg-[#020617]/95 backdrop-blur-lg border-t border-white/10">
+
+          <div className="flex flex-col items-center gap-5 py-6 text-white">
+
+            {linksDetectionResult.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-3 text-lg hover:text-sky-400 transition"
+                >
+                  <Icon className="w-6 h-6" />
+                  {item.label}
+                </Link>
+              );
+            })}
+
+          </div>
+        </div>
+      )}
 
 
       {/* Search Modal */}
