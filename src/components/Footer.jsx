@@ -17,9 +17,14 @@ function Footer() {
   ];
 
   return (
-    <footer className="relative z-20 w-full py-10 bg-white/5 backdrop-blur-lg border-t border-white/10">
+    <footer className="relative z-20 w-full py-10 
+bg-gradient-to-t from-[#020617] via-[#0f172a] to-[#020617]
+border-t border-white/10">
+
+      
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         
+        {/* Social Icons */}
         <div className="flex gap-6 mb-8">
           {socialLinks.map((social) => (
             <a 
@@ -27,20 +32,37 @@ function Footer() {
               href={social.url}
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white text-xl transition-all duration-300 hover:bg-white hover:text-[#0A0D5C] hover:-translate-y-2 shadow-lg"
+              className="
+                w-12 h-12 
+                rounded-full 
+                bg-white/10 
+                flex 
+                items-center 
+                justify-center 
+                text-white 
+                text-xl 
+                transition-all 
+                duration-300 
+                hover:bg-white 
+                hover:text-[#0A0D5C] 
+                hover:-translate-y-2 
+                shadow-lg
+              "
             >
               <social.icon />
             </a>
           ))}
         </div>
 
-        {/* the footer*/}
+        {/* Copyright */}
         <div className="text-center">
-          <p className="text-white/80 text-lg font-medium tracking-wide">
-                     المركز السعودي للأعمال © 2026 جميع الحقوق محفوظة           </p>
+          <p className="text-white/80 text-sm md:text-base font-medium tracking-wide">
+            المركز السعودي للأعمال © 2026 جميع الحقوق محفوظة
+          </p>
         </div>
 
       </div>
+
     </footer>
   );
 }

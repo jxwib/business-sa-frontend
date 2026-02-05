@@ -28,7 +28,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-black/70 via-black/40 to-black/10 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed top-0 inset-x-0 z-50
+bg-gradient-to-b from-[#020617] via-[#0f172a] to-[#020617]
+backdrop-blur-md border-b border-white/10">
+
         <div className="max-w-[1400px] mx-auto px-6">
 
           <div className="grid grid-cols-[auto_1fr_auto] h-24 items-center text-white">

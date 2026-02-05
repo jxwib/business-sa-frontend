@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar"; 
-
 import aboutBg from "../assets/AboutUssbc.jpg";
-
 import { 
   UserGroupIcon, 
   CheckCircleIcon,
@@ -30,15 +28,15 @@ function AboutUs() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
            
-             {/* Goals */}
+          {/* Goals */}
           <div className="flex flex-col gap-8 order-2 lg:order-1">
             
-            <h2 className="text-3xl font-bold text-center lg:text-right mb-4 border-r-4 border-sky-500 pr-4 text-[#0A0D5C]">
+            <h2 className="text-3xl font-bold text-center lg:text-right mb-4 border-r-4 border-sky-500 pr-4 text-slate-200">
               الأهداف
             </h2>
              
-             <div className="flex items-center justify-end gap-6 group">
-              <span className="text-lg font-medium text-right max-w-[250px] text-[#0A0D5C]">
+            <div className="flex items-center justify-end gap-6 group">
+              <span className="text-lg font-medium text-right max-w-[250px] text-slate-200">
                 تسهيل بدء وممارسة الأعمال الاقتصادية.
               </span>
 
@@ -48,7 +46,7 @@ function AboutUs() {
             </div>
 
             <div className="flex items-center justify-end gap-6 group">
-              <span className="text-lg font-medium text-right max-w-[250px] text-[#0A0D5C]">
+              <span className="text-lg font-medium text-right max-w-[250px] text-slate-200">
                 تحسين جودة المتطلبات الحكومية.
               </span>
 
@@ -58,7 +56,7 @@ function AboutUs() {
             </div>
 
             <div className="flex items-center justify-end gap-6 group">
-              <span className="text-lg font-medium text-right max-w-[250px] text-[#0A0D5C]">
+              <span className="text-lg font-medium text-right max-w-[250px] text-slate-200">
                 المساعدة في اتخاذ القرارات بناءً على دراسة ومعالجة البيانات.
               </span>
 
@@ -70,10 +68,10 @@ function AboutUs() {
           </div>
 
 
+          {/* Content */}
           <div className="flex flex-col gap-10 order-1 lg:order-2 text-right">
 
             {/* About */}
-
             <div>
               <h2 className="text-sky-400 text-2xl font-bold mb-4">
                 عن المركز
@@ -81,7 +79,7 @@ function AboutUs() {
 
               <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl">
 
-                <p className="text-lg leading-relaxed text-[#0A0D5C]">
+                <p className="text-lg leading-relaxed text-slate-200">
                   مركز يُعنى بتيسير إجراءات بدء الأعمال الاقتصادية، ومزاولتها، وإنهائها، وتقديم جميع الخدمات ذات الصلة؛ وفقًا لأفضل الممارسات الدولية. وقد أُسس المركز بموجب قرار مجلس الوزراء رقم (456)، الصادر بتاريخ 11 شعبان 1440هـ، وبموجبه يرتبط تنظيميًا بمجلس الشؤون الاقتصادية والتنمية.
                 </p>
 
@@ -94,7 +92,7 @@ function AboutUs() {
                 الرسالة
               </h2>
 
-              <p className="text-lg text-[#0A0D5C]">
+              <p className="text-lg text-slate-200">
                 خلق بيئة أعمال جاذبة، وتقديم نموذج خدمات يعزز القدرة التنافسية، والاستثمار، والنمو، في المملكة العربية السعودية
               </p>
             </div>
@@ -105,7 +103,7 @@ function AboutUs() {
                 الرؤية
               </h2>
 
-              <p className="text-lg text-[#0A0D5C]">
+              <p className="text-lg text-slate-200">
                 أن تصبح المملكة العربية السعودية إحدى الدول العشر الرائدة في العالم: في جودة وسلاسة وكفاءة الخدمات الحكومية الموجهة لقطاع الأعمال.
               </p>
             </div>
@@ -117,6 +115,5 @@ function AboutUs() {
     </div>
   );
 }
-
 
 export default AboutUs;
